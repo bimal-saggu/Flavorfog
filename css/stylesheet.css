@@ -4868,3 +4868,22 @@ footer .copyright a {
     overflow: hidden !important;
   }
 }
+@media (min-width: 320px) and (max-width: 660px) {
+  .newsletter .herotext h1 {
+    font-size: 28px;
+  }
+  .newsletter .herotext .description {
+    font-size: 10px;
+  }
+  .hero-img-text {
+    font-size: 30px !important;
+  }
+  .hero-img-subtext-two {
+    font-size: 12px !important;
+    margin-top: 45px;
+  }
+  .hero-img-subtext-three {
+    font-size: 12px !important;
+    margin-top: 90px;
+  }
+}
