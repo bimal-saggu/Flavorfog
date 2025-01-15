@@ -4456,10 +4456,10 @@ footer .copyright a {
     font-size: 18px;
     line-height: 20px;
   }
-  .navbar-brand > img {
+  /* .navbar-brand > img {
     width: 80% !important;
     height: auto;
-  }
+  } */
   .navbar-default .navbar-nav {
     padding-top: 0px;
     padding-bottom: 0px;
