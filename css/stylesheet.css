@@ -316,6 +316,8 @@ body {
 /* ---------------------------------------------------------------------- NAVBAR STARTS -------------------------- */
 .navbar-header .navbar-brand img,
 .navbar img {
+  -webkit-width: 90px;
+  -webkit-height: 60px;
   width: 90px;
   height: 60px;
 }
