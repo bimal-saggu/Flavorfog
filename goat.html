@@ -113,16 +113,42 @@
                             </p>
                             <div class="description animated" data-animation="fadeInUp" data-animation-delay="800">At FlavorFog Kitchen, our chefs blend passion and expertise to create authentic and flavorful dishes.</div>
                             <div class="description animated" data-animation="fadeInUp" data-animation-delay="800">*Click to view the image on fullscreen</div>
+							<div class="description animated menu-slide-text" data-animation="fadeInUp" data-animation-delay="800">*Slide to view the menu</div>
                         </div>
                     </div>
                 </div>
 				<div class="wrapper">
 					<div class="menu-container">
-						<div class="item"><img src="images/goat-menu/menu-one.png" alt="Image 1" onclick="openFullscreen(this)"></div>
-						<div class="item"><img src="images/goat-menu/menu-two.png" alt="Image 2 " onclick="openFullscreen(this)"></div>
-						<div class="item"><img src="images/goat-menu/menu-three.png" alt="Image 2 " onclick="openFullscreen(this)"></div>
-						<div class="item"><img src="images/goat-menu/menu-four.png" alt="Image 2 " onclick="openFullscreen(this)"></div>
-						<div class="item"><img src="images/goat-menu/menu-five.png" alt="Image 2 " onclick="openFullscreen(this)"></div>
+						<div class="item">
+							<img src="images/goat-menu/menu-one.png" alt="Image 1" onclick="openFullscreen(this)">
+							<div class="overlay">
+								<div class="overlay-text">Click to View</div>
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/goat-menu/menu-two.png" alt="Image 2 " onclick="openFullscreen(this)">
+							<div class="overlay">
+								<div class="overlay-text">Click to View</div>
+							  </div>
+						</div>
+						<div class="item">
+							<img src="images/goat-menu/menu-three.png" alt="Image 2 " onclick="openFullscreen(this)">
+							<div class="overlay">
+								<div class="overlay-text">Click to View</div>
+							  </div>
+						</div>
+						<div class="item">
+							<img src="images/goat-menu/menu-four.png" alt="Image 2 " onclick="openFullscreen(this)">
+							<div class="overlay">
+								<div class="overlay-text">Click to View</div>
+							  </div>
+						</div>
+						<div class="item">
+							<img src="images/goat-menu/menu-five.png" alt="Image 2 " onclick="openFullscreen(this)">
+							<div class="overlay">
+								<div class="overlay-text">Click to View</div>
+							</div>
+						</div>
 					</div>
 				</div>
                 <!-- <div class="menu-carousel animated" data-animation="fadeInUp" data-animation-delay="1000">
@@ -354,35 +380,37 @@ Email: chef@flavorfogkitchen.co.uk / royalgoathotel@gmail.com
 		<script src="js/custom/custom.js"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
-				const images = document.querySelectorAll(".item img");
-				const overlay = document.getElementById("fullscreenOverlay");
-				const fullscreenImg = document.getElementById("fullscreenImage");
-				const closeBtn = document.getElementById("closeFullscreen");
-	
-				// Function to open fullscreen
-				function openFullscreen(event) {
-					fullscreenImg.src = event.target.src;
-					overlay.style.display = "flex";
-				}
-	
-				// Function to close fullscreen
-				function closeFullscreen() {
-					overlay.style.display = "none";
-				}
-	
-				// Attach click event to each image inside .picture
-				images.forEach(img => {
-					img.addEventListener("click", openFullscreen);
-				});
-	
-				// Close when clicking outside image or pressing close button
-				closeBtn.addEventListener("click", closeFullscreen);
-				overlay.addEventListener("click", (e) => {
-					if (e.target === overlay) {
-						closeFullscreen();
-					}
-				});
-			});
+    		const overlays = document.querySelectorAll(".overlay");
+    		const overlay = document.getElementById("fullscreenOverlay");
+    		const fullscreenImg = document.getElementById("fullscreenImage");
+    		const closeBtn = document.getElementById("closeFullscreen");
+
+    		// Function to open fullscreen
+    		function openFullscreen(event) {
+        		// Find the image inside the same .item container
+        		const image = event.target.closest('.item').querySelector('img');
+        		fullscreenImg.src = image.src;  // Set the fullscreen image to the clicked image
+        		overlay.style.display = "flex";  // Show the fullscreen overlay
+    		}
+
+    		// Function to close fullscreen
+    		function closeFullscreen() {
+        		overlay.style.display = "none";  // Hide the fullscreen overlay
+    		}
+
+    		// Attach click event to each overlay (to trigger fullscreen)
+    		overlays.forEach(overlay => {
+        		overlay.addEventListener("click", openFullscreen);  // Open fullscreen when overlay is clicked
+    		});
+
+    		// Close when clicking on the close button or outside the image
+    		closeBtn.addEventListener("click", closeFullscreen);
+    		overlay.addEventListener("click", (e) => {
+        		if (e.target === overlay) {  // Close if user clicks outside the image
+            		closeFullscreen();
+        		}
+    		});
+		});
 		</script>
 	</body>
 </html>
