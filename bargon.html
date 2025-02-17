@@ -65,13 +65,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand visible-sm visible-xs light-logo" href="#"><img src="images/logos/white-no-background - fixed.png" alt=""></a>
-                    <a class="navbar-brand visible-sm visible-xs dark-logo" href="#"><img src="images/logos/black-no-background - fixed.png" alt=""></a>
+					<a class="navbar-brand visible-sm visible-xs light-logo" href="index.html"><img src="images/logos/white-no-background - fixed.png" alt=""></a>
+                    <a class="navbar-brand visible-sm visible-xs dark-logo" href="index.html"><img src="images/logos/black-no-background - fixed.png" alt=""></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav" data-hover="dropdown" data-animations="fadeIn fadeIn fadeInUp fadeInLeft">
-						<li class="pull-left"><a class="navbar-brand hidden-sm hidden-xs light-logo" href="#"><img src="images/logos/white-no-background - fixed.png" alt=""></a> <a class="navbar-brand hidden-sm hidden-xs dark-logo" href="#"><img src="images/logos/black-no-background.png" alt=""></a></li>
+						<li class="pull-left"><a class="navbar-brand hidden-sm hidden-xs light-logo" href="index.html"><img src="images/logos/white-no-background - fixed.png" alt=""></a> <a class="navbar-brand hidden-sm hidden-xs dark-logo" href="index.html"><img src="images/logos/black-no-background.png" alt=""></a></li>
                         <!-- <li class="dropdown shop_cart pull-right"> -->
 							<!-- <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>2</span></a> -->
 						</li>
@@ -102,7 +102,7 @@
 			========================================================================= -->
 		
 
-        <div id="team" class="light-texture-01 menu" id="menu">
+        <div class="light-texture-01 menu" id="menu">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -115,8 +115,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="menu-carousel">
-					<!-- Image Blocks -->
+				<div class="wrapper">
+					<div class="menu-container">
+						<div class="item"><img src="images/bargon-menu/menu-one.JPG" alt="Image 1" onclick="openFullscreen(this)"></div>
+						<div class="item"><img src="images/bargon-menu/menu-two.JPG" alt="Image 2 " onclick="openFullscreen(this)"></div>
+					</div>
+				</div>
+                <!-- <div class="menu-carousel">
 					<div class="block">
 						<div class="picture">
 							<img src="images/bargon-menu/menu-one.JPG" class="img-responsive center-block" alt="Menu One" onclick="openFullscreen(this)">
@@ -127,7 +132,7 @@
 							<img src="images/bargon-menu/menu-two.JPG" class="img-responsive center-block" alt="Menu Two" onclick="openFullscreen(this)">
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- Fullscreen Overlay -->
 				<div class="fullscreen-overlay" id="fullscreenOverlay">
 					<span class="close-btn" id="closeFullscreen">&times;</span>
@@ -330,7 +335,7 @@ Email: chef@flavorfogkitchen.co.uk / royalgoathotel@gmail.com
 		<script src="js/custom/custom.js"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
-				const images = document.querySelectorAll(".picture img");
+				const images = document.querySelectorAll(".item img");
 				const overlay = document.getElementById("fullscreenOverlay");
 				const fullscreenImg = document.getElementById("fullscreenImage");
 				const closeBtn = document.getElementById("closeFullscreen");

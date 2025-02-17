@@ -30,7 +30,7 @@
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-  /* color: #f53700; */
+  color: #f53700;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a,
