@@ -48,10 +48,15 @@
 }
 .navbar-default.sticky .navbar-nav {
   padding-top: 10px;
-  padding-bottom: 75px;
+  padding-bottom: 10px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .navbar-default.sticky .navbar-nav {
+    padding-bottom: 75px;
+  }
 }
 .navbar-default.sticky .navbar-nav > li > a {
   color: #222;
@@ -511,10 +516,15 @@ nav.normal .navbar-header .dark-logo {
   }
   .navbar-default .navbar-nav {
     padding-top: 0px;
-    padding-bottom: 75px;
+    padding-bottom: 10px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+  }
+  @media (max-width: 767px) {
+    .navbar-default .navbar-nav {
+      padding-bottom: 75px;
+    }
   }
   .yamm .navbar-nav li {
     background-color: #222222;
